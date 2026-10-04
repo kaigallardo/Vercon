@@ -1,0 +1,415 @@
+:root {
+  --bg-dark: #0f0f0f;
+  --panel-dark: #181f2a;
+  --header-bg: rgba(24,31,42,0.9);
+  --primary-neon: #00e0ff;
+  --accent-purple: #8e44ad;
+  --accent-purple-light: #9b59b6;
+  --text-light: #eaf6fb;
+  --text-muted: rgba(234,246,251,0.8);
+  --label-green: #2ecc71;
+  --color-navbackground: #0a0a0a;
+  --color-background: #0f0f0f;
+  --color-text: #ececec;
+  --color-text-hover: #aa82fa;
+  --color-primary: #412575;
+  --color-submenu-background: #1a1a1a;
+  --color-submenu-hover: #673fb3;
+  --color-shadow-nav: rgba(65, 37, 117, 0.6);
+}
+
+/* Fondo de partículas */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Body general */
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main ocupa todo el espacio disponible */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2em 1em;
+}
+
+/* HEADER NEGRO SÓLIDO CON ILUMINACIÓN */
+header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em 2em;
+  background-color: #000000; /* negro sólido */
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 10px rgba(255,255,255,0.05), 0 0 20px rgba(255,255,255,0.1);
+}
+
+/* Logo y tagline */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1.logo {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 2.2rem;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(255,255,255,0.5), 0 0 12px rgba(255,255,255,0.3);
+  margin: 0;
+}
+
+header p.tagline {
+  font-size: 1rem;
+  color: rgba(234,246,251,0.7);
+  margin-top: 0.2em;
+  text-shadow: 0 0 4px rgba(255,255,255,0.1);
+}
+
+/* NAVBAR */
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: bold;
+  padding: 0.5em 1.2em;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 3px rgba(255,255,255,0.1);
+  display: block;
+}
+
+.navbar a:hover {
+  border-color: rgba(255,255,255,0.3);
+  box-shadow: 0 0 10px rgba(255,255,255,0.4), 0 0 15px rgba(255,255,255,0.2);
+  color: var(--color-text-hover);
+}
+
+/* Submenu desplegable */
+.navbar li .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-submenu-background);
+  border: 1px solid var(--accent-purple);
+  border-radius: 10px;
+  min-width: 180px;
+  z-index: 100;
+  padding: 0.5em 0;
+}
+
+.navbar li:hover .submenu {
+  display: block;
+}
+
+.navbar li .submenu li {
+  margin: 0;
+}
+
+.navbar li .submenu li a {
+  padding: 0.5em 1em;
+  color: var(--text-light);
+  border-radius: 0;
+  border: none;
+}
+
+.navbar li .submenu li a:hover {
+  background-color: var(--color-submenu-hover);
+  color: var(--text-light);
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2em;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card general */
+.card {
+  background: linear-gradient(145deg, rgba(30,30,30,0.9), rgba(40,40,40,0.9));
+  border: 1px solid rgba(142, 68, 173, 0.5);
+  border-radius: 20px;
+  width: 360px;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(142, 68, 173, 0.2);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 30px rgba(142, 68, 173, 0.5);
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 0.5em;
+}
+
+/* Botones de tarjetas */
+.card-title {
+  background: linear-gradient(45deg, var(--accent-purple), var(--accent-purple-light));
+  border: none;
+  color: var(--text-light);
+  padding: 0.8em 1.4em;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  white-space: nowrap;
+  box-shadow: 0 0 10px rgba(142,68,173,0.5);
+  text-shadow: 0 0 8px var(--accent-purple-light);
+  animation: glow 1.5s infinite alternate;
+}
+
+.card-title:hover {
+  background: linear-gradient(45deg, var(--accent-purple-light), var(--accent-purple));
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(142,68,173,0.7);
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(142,68,173,0.5);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(142,68,173,1);
+  }
+}
+
+/* Labels */
+.conversion-labels {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.label {
+  background-color: transparent;
+  border: 1px solid var(--label-green);
+  color: var(--label-green);
+  padding: 0.3em 0.5em;
+  border-radius: 20px;
+  font-size: 0.8em;
+  box-shadow: 0 1px 3px rgba(46,204,113,0.3);
+}
+
+.docx {
+  margin-left: 8px;
+}
+
+/* --- Input file y export select con estilo unificado --- */
+#document-input {
+  display: none;
+}
+
+.upload-label {
+  display: block;
+  margin: 2em auto 1em auto;
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  border: 1px solid var(--accent-purple);
+  border-radius: 25px;
+  background: linear-gradient(45deg, transparent, transparent);
+  color: var(--accent-purple);
+  text-align: center;
+  cursor: pointer;
+  width: 90%;
+  max-width: 400px;
+}
+
+#file-name {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: var(--accent-purple-light);
+}
+
+.export-select-container {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  max-width: 300px;
+  margin: 1.5em auto;
+}
+
+.export-select-container::after {
+  content: '▾';
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  color: var(--accent-purple);
+  pointer-events: none;
+  font-size: 1em;
+}
+
+.export-select {
+  display: block;
+  width: 100%;
+  background: linear-gradient(145deg, rgba(30,30,30,0.9), rgba(40,40,40,0.9));
+  border: 2px solid var(--accent-purple);
+  color: var(--text-light);
+  padding: 0.6em 1em;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  appearance: none;
+  box-shadow: 0 0 10px rgba(142,68,173,0.5);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.export-select:hover {
+  border-color: var(--accent-purple-light);
+  box-shadow: 0 0 20px rgba(142,68,173,0.7);
+}
+
+.export-select option {
+  background-color: rgba(24,24,24,0.95);
+  color: var(--text-light);
+}
+
+/* Área de previsualización del documento */
+.preview-container {
+  width: 100%;
+  max-width: 560px;
+  margin-top: 1em;
+}
+
+#doc-preview {
+  width: 100%;
+  height: 300px;
+  border: 1px solid var(--accent-purple);
+  border-radius: 10px;
+  padding: 0.5em;
+  background: #181f2a;
+  color: var(--text-light);
+  font-family: monospace;
+  overflow: auto;
+  display: none;
+}
+
+/* Botón de descarga con estilo cian/neón */
+#download-document {
+  display: none;
+  margin-top: 1em;
+  background: linear-gradient(45deg, var(--accent-purple), var(--accent-purple-light));
+  border: none;
+  color: var(--text-light);
+  padding: 0.8em 1.4em;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(142,68,173,0.5);
+  transition: all 0.3s ease;
+  animation: glow 2s infinite alternate;
+}
+
+#download-document:hover {
+  background: linear-gradient(45deg, var(--accent-purple-light), var(--accent-purple));
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(142,68,173,0.7);
+}
+
+/* FOOTER PROFESIONAL */
+footer {
+  position: relative;
+  z-index: 2;
+  background-color: var(--color-navbackground);
+  color: var(--color-text);
+  text-align: center;
+  padding: 3% 0;
+  font-size: 90%;
+  box-shadow: 0 -2px 10px var(--color-shadow-nav);
+  border-top: 1px solid var(--color-primary);
+}
+
+footer p {
+  margin-left: 1.5%;
+  margin-bottom: 0.5rem;
+}
+
+.firma-artistica {
+  margin: 0.5rem 0 1.5rem;
+  font-style: italic;
+  color: var(--color-text-hover);
+  font-size: 0.9em;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--color-text-hover);
+  transform: scale(1.1);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.footer-social svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+  vertical-align: middle;
+}

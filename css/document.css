@@ -1,0 +1,160 @@
+:root {
+  --bg-dark: #0f0f0f;
+  --panel-dark: #181f2a;
+  --accent-purple: #8e44ad;
+  --accent-purple-light: #9b59b6;
+  --text-light: #eaf6fb;
+  --label-green: #2ecc71;
+}
+
+/* Input file oculto para documentos */
+#document-input {
+  display: none;
+}
+
+/* Tarjeta general para todo-en-uno */
+.card {
+  background: linear-gradient(145deg, rgba(30,30,30,0.9), rgba(40,40,40,0.9));
+  border: 1px solid rgba(142,68,173,0.5);
+  border-radius: 20px;
+  width: 560px;
+  margin: 2em auto;
+  padding: 2em 1em;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(142,68,173,0.2);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 30px rgba(142,68,173,0.5);
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 1.5em;
+}
+
+/* Label personalizado / botón subir documentos */
+.upload-label,
+.card-title {
+  background: linear-gradient(45deg, var(--accent-purple), var(--accent-purple-light));
+  border: none;
+  color: var(--text-light);
+  padding: 1em 1.6em;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(142,68,173,0.5);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  animation: glow 2s infinite alternate;
+}
+
+.upload-label:hover,
+.card-title:hover {
+  background: linear-gradient(45deg, var(--accent-purple-light), var(--accent-purple));
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(142,68,173,0.7);
+}
+
+/* Glow animado */
+@keyframes glow {
+  0% { box-shadow: 0 0 10px rgba(142,68,173,0.5); }
+  50% { box-shadow: 0 0 20px rgba(142,68,173,0.9); }
+  100% { box-shadow: 0 0 10px rgba(142,68,173,0.5); }
+}
+
+/* Nombre del archivo seleccionado */
+#file-name {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 0.9em;
+  color: var(--accent-purple);
+}
+
+/* Área de previsualización del documento */
+.preview-container {
+  margin-top: 1.5em;
+  text-align: left;
+}
+
+#doc-preview {
+  width: 100%;
+  height: 200px;
+  border: 1px solid var(--accent-purple);
+  border-radius: 10px;
+  padding: 0.5em;
+  background: rgba(24,24,24,0.95);
+  color: var(--text-light);
+  font-family: monospace;
+  overflow: auto;
+  display: none;
+}
+
+/* Selector de exportación con estilo igual que imágenes */
+.export-select-container {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  max-width: 300px;
+  margin: 1.5em auto;
+}
+
+.export-select-container::after {
+  content: '▾';
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  color: var(--accent-purple);
+  pointer-events: none;
+  font-size: 1em;
+}
+
+.export-select {
+  display: block;
+  width: 100%;
+  background: linear-gradient(145deg, rgba(30,30,30,0.9), rgba(40,40,40,0.9));
+  border: 2px solid var(--accent-purple);
+  color: var(--text-light);
+  padding: 0.6em 1em;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  appearance: none;
+  box-shadow: 0 0 10px rgba(142,68,173,0.5);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.export-select:hover {
+  border-color: var(--accent-purple-light);
+  box-shadow: 0 0 20px rgba(142,68,173,0.7);
+}
+
+/* Botón de descarga */
+#download-document {
+  display: none;
+  margin-top: 1.5em;
+  text-decoration: none;
+  background: linear-gradient(45deg, var(--accent-purple), var(--accent-purple-light));
+  color: var(--text-light);
+  padding: 0.8em 1.4em;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(142,68,173,0.5);
+  transition: all 0.3s ease;
+  animation: glow 2s infinite alternate;
+}
+
+#download-document:hover {
+  background: linear-gradient(45deg, var(--accent-purple-light), var(--accent-purple));
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(142,68,173,0.7);
+}

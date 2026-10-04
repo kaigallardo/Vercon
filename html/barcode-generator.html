@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generador de Códigos de Barras - Vercon</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../css/barcode-generator.css">
+</head>
+<body>
+  <div id="particles-js" aria-hidden="true"></div>
+
+  <header>
+    <h1>Generador de Códigos de Barras</h1>
+    <!-- Navegación -->
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <div class="dropdown" style="display:inline-block; position:relative;">
+        <a href="#" style="padding: 0.5em 1em; display:block;">Conversores ▾</a>
+        <ul style="display:none; list-style: none; margin:0; padding:0; position:absolute; background:#000; border:1px solid #8e44ad; border-radius:5px; z-index:2;">
+          <li><a href="image-converter.html" style="padding:0.5em 1em; display:block;">Imágenes</a></li>
+          <li><a href="document-converter.html" style="padding:0.5em 1em; display:block;">Documentos</a></li>
+          <li><a href="csv-manager.html" style="padding:0.5em 1em; display:block;">CSV</a></li>
+          <li><a href="audio-converter.html" style="padding:0.5em 1em; display:block;">Audio</a></li>
+          <li><a href="video-converter.html" style="padding:0.5em 1em; display:block;">Video</a></li>
+          <li><a href="pdf-tools.html" style="padding:0.5em 1em; display:block;">PDF</a></li>
+          <li><a href="ocr-tool.html" style="padding:0.5em 1em; display:block;">OCR</a></li>
+          <li><a href="qr-generator.html" style="padding:0.5em 1em; display:block;">QR</a></li>
+          <li><a href="barcode-generator.html" style="padding:0.5em 1em; display:block;">Barras</a></li>
+          <li><a href="emoji-generator.html" style="padding:0.5em 1em; display:block;">Emojis</a></li>
+        </ul>
+      </div>
+      <a href="../contact.html" style="padding: 0.5em 1em; display:inline-block;">Contáctanos</a>
+    </nav>  
+  </header>
+
+  <main>
+    <div class="converter-section">
+      <h2>Ingresa el número del código de barras</h2>
+      <p>Formatos soportados: EAN-13, UPC, Code128</p>
+
+      <!-- Campo de entrada -->
+      <input type="text" id="barcode-input" placeholder="Ejemplo: 978000000000" maxlength="13" />
+
+      <!-- Selector de formato -->
+      <label for="barcode-format" style="margin-top:1em; display:block;">Selecciona un formato:</label>
+      <select id="barcode-format" style="padding: 0.5em; border-radius: 8px; border: 1px solid #8e44ad; background-color: #1e1e1e; color: #fff;">
+        <option value="EAN13">EAN-13 (13 dígitos)</option>
+        <option value="UPC">UPC (12 dígitos)</option>
+        <option value="CODE128">Code128</option>
+        <option value="CODE39">Code39</option>
+      </select>
+
+      <!-- Mensaje de estado -->
+      <div id="message-box" class="message-box"></div>
+
+      <!-- Botón Generar -->
+      <button class="card-title" id="generate-barcode" style="margin-top:1em;">Generar Código de Barras</button>
+
+      <!-- Resultado -->
+      <div id="barcode-result" class="preview" style="margin-top:20px;"></div>
+
+      <!-- Descargar -->
+      <a id="download-barcode" style="display:none;" download="barcode.png">Descargar Código de Barras</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vercon - Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js "></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.5/JsBarcode.all.min.js "></script>
+  <script src="../srcipt.js"></script>
+  <script src="../js/barcode-generator.js"></script>
+</body>
+</html>

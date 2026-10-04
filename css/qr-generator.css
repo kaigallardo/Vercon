@@ -1,0 +1,53 @@
+/* Estilo para el área de texto */
+#qr-input {
+  width: 90%;
+  max-width: 320px;
+  padding: 1em;
+  border-radius: 15px;
+  border: 1px solid #8e44ad;
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 1em;
+  box-shadow: 0 0 10px rgba(142, 68, 173, 0.3);
+  transition: box-shadow 0.3s, border-color 0.3s;
+  resize: none;
+}
+
+#qr-input:focus {
+  outline: none;
+  border-color: #9b59b6;
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.7);
+}
+
+/* Contenedor de la imagen QR generada */
+#qr-result {
+  display: none;
+  margin-top: 1.5em;
+  padding: 1em;
+  background: rgba(30,30,30,0.9);
+  border: 1px solid rgba(142,68,173,0.5);
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(142, 68, 173, 0.2);
+  text-align: center;
+}
+
+
+/* Enlace para descargar QR */
+#download-qr {
+  display: inline-block;
+  margin-top: 1em;
+  background: linear-gradient(45deg, #8e44ad, #9b59b6);
+  color: #fff;
+  padding: 0.6em 1.2em;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(142, 68, 173, 0.5);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+#download-qr:hover {
+  background: linear-gradient(45deg, #9b59b6, #8e44ad);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(142, 68, 173, 0.7);
+}

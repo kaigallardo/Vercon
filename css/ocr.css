@@ -1,0 +1,102 @@
+
+
+.file-upload-wrapper input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  background: linear-gradient(45deg, #8e44ad, #9b59b6);
+  color: #fff;
+  padding: 0.8em 1.4em;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(142,68,173,0.5);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-shadow: 0 0 8px #9b59b6;
+  margin-bottom: 1em;
+  user-select: none;
+}
+
+.custom-file-upload:hover {
+  background: linear-gradient(45deg, #9b59b6, #8e44ad);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(142,68,173,0.7);
+}
+
+#file-name {
+  display: block;
+  margin: 0.5em 0 1.5em;
+  font-weight: 500;
+  color: #ccc;
+  min-height: 1.5em;
+}
+
+#ocr-type {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 2px solid #8e44ad;
+  border-radius: 25px;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(142,68,173,0.4);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5em;
+  text-shadow: 0 0 5px #9b59b6;
+}
+
+#ocr-type:hover {
+  box-shadow: 0 0 20px rgba(142,68,173,0.7);
+  background-color: #222;
+}
+
+#ocr-type:focus {
+  outline: none;
+  border-color: #9b59b6;
+  box-shadow: 0 0 25px rgba(155,89,182,0.8);
+}
+
+#start-ocr {
+  background: linear-gradient(45deg, #8e44ad, #9b59b6);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8em 1.6em;
+  font-size: 1.1em;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(142,68,173,0.5);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5em;
+  text-shadow: 0 0 8px #9b59b6;
+}
+
+#start-ocr:hover {
+  background: linear-gradient(45deg, #9b59b6, #8e44ad);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(142,68,173,0.7);
+}
+
+#ocr-result {
+  width: 100%;
+  height: 220px;
+  background: #121212;
+  border: 2px solid #8e44ad;
+  border-radius: 15px;
+  color: #ccc;
+  padding: 1em;
+  font-size: 1em;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 0 15px #9b59b6 inset;
+  resize: vertical;
+  user-select: text;
+  box-sizing: border-box;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conversor de Video - Vercon</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../css/video.css" />
+</head>
+<body>
+  <!-- Fondo de partículas -->
+  <div id="particles-js"></div>
+
+  <header>
+    <h1>Conversor de Video</h1>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <div class="dropdown" style="display:inline-block; position:relative;">
+        <a href="#" style="padding: 0.5em 1em; display:block;">Conversores ▾</a>
+        <ul style="display:none; list-style:none; margin:0; padding:0; position:absolute; background:#000; border:1px solid #8e44ad; border-radius:5px; z-index:2;">
+          <li><a href="image-converter.html" style="padding:0.5em 1em; display:block;">Imágenes</a></li>
+          <li><a href="document-converter.html" style="padding:0.5em 1em; display:block;">Documentos</a></li>
+          <li><a href="csv-manager.html" style="padding:0.5em 1em; display:block;">CSV</a></li>
+          <li><a href="audio-converter.html" style="padding:0.5em 1em; display:block;">Audio</a></li>
+          <li><a href="video-converter.html" style="padding:0.5em 1em; display:block;">Video</a></li>
+          <li><a href="pdf-tools.html" style="padding:0.5em 1em; display:block;">PDF</a></li>
+          <li><a href="ocr-tool.html" style="padding:0.5em 1em; display:block;">OCR</a></li>
+          <li><a href="qr-generator.html" style="padding:0.5em 1em; display:block;">QR</a></li>
+          <li><a href="barcode-generator.html" style="padding:0.5em 1em; display:block;">Barras</a></li>
+          <li><a href="emoji-generator.html" style="padding:0.5em 1em; display:block;">Emojis</a></li>
+        </ul>
+      </div>
+      <a href="../contact.html" style="padding: 0.5em 1em; display:inline-block;">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="converter-section">
+        <h2>Sube tu archivo de video</h2>
+
+        <div class="file-upload-wrapper">
+            <label for="video-file" class="custom-file-upload">Seleccionar archivo</label>
+            <input type="file" id="video-file" accept="video/*">
+        </div>
+
+        <span id="file-name"></span>
+
+        <!-- Reproductor para vista previa -->
+        <video id="video-preview" controls style="display:none; margin-top: 1em;"></video>
+
+        <select id="video-format" class="export-select">
+            <option value="mp4" selected>.mp4 (MPEG-4 Part 14)</option>
+            <option value="avi">.avi (Audio Video Interleave)</option>
+            <option value="mov">.mov (Apple QuickTime)</option>
+            <option value="wmv">.wmv (Windows Media Video)</option>
+            <option value="flv">.flv (Flash Video)</option>
+            <option value="mkv">.mkv (Matroska Video)</option>
+            <option value="webm">.webm (Web Optimizado)</option>
+            <option value="mpeg">.mpeg (MPEG Video)</option>
+            <option value="3gp">.3gp (Video móvil)</option>
+            <option value="ts">.ts (Transmisión digital)</option>
+        </select>
+
+
+        <!-- Botón de conversión -->
+        <button class="card-title" id="convert-video">Convertir Video</button>
+        
+        <!-- Botón de descarga -->
+        <a id="download-video" download="video_convertido.mp4" style="display:none;">Descargar Video</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vercon - Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../srcipt.js"></script>
+  <script src="../js/video.js"></script>
+</body>
+</html>

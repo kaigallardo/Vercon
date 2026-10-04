@@ -1,0 +1,80 @@
+/* Oculta el input original */
+.file-upload-wrapper input[type="file"] {
+  display: none;
+}
+
+/* Botón personalizado con estilo neón */
+.custom-file-upload {
+  display: inline-block;
+  background: linear-gradient(45deg, #8e44ad, #9b59b6);
+  color: #ffffff;
+  padding: 0.8em 1.4em;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(142,68,173,0.5);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  text-shadow: 0 0 8px #9b59b6;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.custom-file-upload:hover {
+  background: linear-gradient(45deg, #9b59b6, #8e44ad);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(142,68,173,0.7);
+}
+
+/* Selector de formato de exportación */
+.export-select {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 2px solid #8e44ad;
+  border-radius: 25px;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  appearance: none;
+  cursor: pointer;
+  margin-top: 1em;
+  box-shadow: 0 0 10px rgba(142,68,173,0.4);
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px #9b59b6;
+}
+
+.export-select:hover {
+  box-shadow: 0 0 20px rgba(142,68,173,0.7);
+  background-color: #222;
+}
+
+.export-select:focus {
+  outline: none;
+  border-color: #9b59b6;
+  box-shadow: 0 0 25px rgba(155,89,182,0.8);
+}
+
+/* Estilo para el reproductor de video */
+#video-preview {
+  display: block;
+  margin: 1em auto 0 auto;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #9b59b6;
+  outline: none;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Enlace descarga */
+#download-video {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: inline-block;
+  margin-top: 1em;
+}
+
+#download-video:hover {
+  color: #9b59b6;
+  text-decoration: underline;
+}

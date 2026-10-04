@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herramientas PDF - Vercon</title>
+  <link rel="stylesheet" href="../css/pdf-tools.css">
+</head>
+<body>
+  <!-- Fondo de partículas -->
+  <div id="particles-js"></div>
+  <header>
+    <h1>Herramientas PDF</h1>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <div class="dropdown" style="display:inline-block; position:relative;">
+        <a href="#" style="padding: 0.5em 1em; display:block;">Conversores ▾</a>
+        <ul style="display:none; list-style: none; margin:0; padding:0; position:absolute; background:#000; border:1px solid #8e44ad; border-radius:5px; z-index:2;">
+          <li><a href="image-converter.html" style="padding:0.5em 1em; display:block;">Imágenes</a></li>
+          <li><a href="document-converter.html" style="padding:0.5em 1em; display:block;">Documentos</a></li>
+          <li><a href="csv-manager.html" style="padding:0.5em 1em; display:block;">CSV</a></li>
+          <li><a href="audio-converter.html" style="padding:0.5em 1em; display:block;">Audio</a></li>
+          <li><a href="video-converter.html" style="padding:0.5em 1em; display:block;">Video</a></li>
+          <li><a href="pdf-tools.html" style="padding:0.5em 1em; display:block;">PDF</a></li>
+          <li><a href="ocr-tool.html" style="padding:0.5em 1em; display:block;">OCR</a></li>
+          <li><a href="qr-generator.html" style="padding:0.5em 1em; display:block;">QR</a></li>
+          <li><a href="barcode-generator.html" style="padding:0.5em 1em; display:block;">Barras</a></li>
+        </ul>
+      </div>
+      <a href="../contact.html" style="padding: 0.5em 1em; display:inline-block;">Contáctanos</a>
+    </nav>
+  </header>
+  <main>
+    <div class="cards-container">
+      <!-- Tarjeta para Unir PDFs -->
+      <div class="card">
+        <h2>Unir PDFs</h2>
+        <button class="card-title" onclick="location.href='pdf/pdf-merge.html'">Unir Archivos</button>
+        <div class="conversion-labels">
+          <span class="label">Merge</span>
+          <span class="label">Combine</span>
+        </div>
+      </div>
+      <!-- Tarjeta para Dividir PDFs -->
+      <div class="card">
+        <h2>Dividir PDFs</h2>
+        <button class="card-title" onclick="location.href='pdf/pdf-split.html'">Dividir Páginas</button>
+        <div class="conversion-labels">
+          <span class="label">Split</span>
+          <span class="label">Extract</span>
+        </div>
+      </div>
+      <!-- Tarjeta para Comprimir PDFs -->
+      <div class="card">
+        <h2>Comprimir PDF</h2>
+        <button class="card-title" onclick="location.href='pdf/pdf-compress.html'">Reducir Tamaño</button>
+        <div class="conversion-labels">
+          <span class="label">Compress</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Vercon - Todos los derechos reservados.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../srcipt.js"></script>
+</body>
+</html>

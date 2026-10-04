@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>OCR - Reconocer Texto - Vercon</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../css/ocr.css" />
+</head>
+<body>
+  <!-- Fondo de partículas -->
+  <div id="particles-js"></div>
+
+  <header>
+    <h1>OCR - Reconocer Texto</h1>
+    <nav>
+      <a href="../index.html">Inicio</a>
+      <div class="dropdown" style="display:inline-block; position:relative;">
+        <a href="#" style="padding: 0.5em 1em; display:block;">Conversores ▾</a>
+        <ul style="display:none; list-style:none; margin:0; padding:0; position:absolute; background:#000; border:1px solid #8e44ad; border-radius:5px; z-index:2;">
+          <li><a href="image-converter.html" style="padding:0.5em 1em; display:block;">Imágenes</a></li>
+          <li><a href="document-converter.html" style="padding:0.5em 1em; display:block;">Documentos</a></li>
+          <li><a href="csv-manager.html" style="padding:0.5em 1em; display:block;">CSV</a></li>
+          <li><a href="audio-converter.html" style="padding:0.5em 1em; display:block;">Audio</a></li>
+          <li><a href="video-converter.html" style="padding:0.5em 1em; display:block;">Video</a></li>
+          <li><a href="pdf-tools.html" style="padding:0.5em 1em; display:block;">PDF</a></li>
+          <li><a href="ocr-tool.html" style="padding:0.5em 1em; display:block;">OCR</a></li>
+          <li><a href="qr-generator.html" style="padding:0.5em 1em; display:block;">QR</a></li>
+          <li><a href="barcode-generator.html" style="padding:0.5em 1em; display:block;">Barras</a></li>
+          <li><a href="emoji-generator.html" style="padding:0.5em 1em; display:block;">Emojis</a></li>
+        </ul>
+      </div>
+      <a href="../contact.html" style="padding: 0.5em 1em; display:inline-block;">Contáctanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="converter-section">
+        <h2>Sube tu archivo para reconocer texto</h2>
+
+        <div class="file-upload-wrapper">
+            <label for="ocr-file" class="custom-file-upload">Seleccionar imagen o PDF</label>
+            <input type="file" id="ocr-file" accept="image/*,application/pdf" />
+        </div>
+
+        <span id="file-name"></span>
+
+        <select id="ocr-type" class="export-select">
+            <option value="image" selected>Reconocer texto de imagen</option>
+            <option value="pdf">Reconocer texto de PDF</option>
+        </select>
+
+        <button id="start-ocr" class="card-title" style="margin-top: 1em;">Iniciar OCR</button>
+
+        <textarea id="ocr-result" readonly placeholder="Aquí aparecerá el texto reconocido..." style="margin-top: 1em; width: 100%; height: 200px; border-radius: 15px; padding: 1em; background-color: #111; color: #ddd; border: 2px solid #8e44ad; box-shadow: 0 0 10px #9b59b6;"></textarea>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vercon - Todos los derechos reservados.</p>
+  </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+    <script src="../js/ocr.js"></script>
+
+</body>
+</html>
